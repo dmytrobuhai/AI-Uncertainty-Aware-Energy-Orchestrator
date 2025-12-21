@@ -1,0 +1,58 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# =========================
+# Virtual environments
+# =========================
+.venv/
+venv/
+env/
+ENV/
+
+# =========================
+# Jupyter / IPython
+# =========================
+.ipynb_checkpoints/
+profile_default/
+.ipython/
+
+# =========================
+# OS / Editor junk
+# =========================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# =========================
+# Logs
+# =========================
+*.log
+
+data/ready2use_region_electricity.csv
+data/alerts
+data/region_electricity_data
+data/alerts_hourly_merged_sorted.csv
+# =========================
+# Open-Meteo / requests-cache
+# =========================
+.cache_openmeteo*
+.cache/
+
+# =========================
+# Torch / CUDA
+# =========================
+*.cuda
+*.cuobjdump
+
+
+# =========================
+# Temporary files
+# =========================
+*.tmp
+*.bak
+*.swp
