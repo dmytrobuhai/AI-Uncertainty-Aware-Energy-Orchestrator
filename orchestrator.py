@@ -147,7 +147,6 @@ class EnergyOrchestrator:
             hidden_dim=128
         ).to(self.device)
         
-        # Назва файлу може відрізнятися, переконайтеся що вона вірна
         model_path = self.model_dir / "system_gru_best.pt" 
         self.load_model.load_state_dict(torch.load(model_path, map_location=self.device))
         self.load_model.eval()
@@ -193,7 +192,6 @@ class EnergyOrchestrator:
         gnn_tensor_scaled = torch.tensor(gnn_scaled, dtype=torch.float32).view(Days, N, Gf).to(self.device)
 
         # 3. Model Inference
-        # x_future подається як є (B, 30), бо це симуляція
         pred_scaled = self.load_model(x_past_tensor, x_future.to(self.device))[0].cpu().numpy()
         deficits = self._denorm(pred_scaled) # (Horizon, Regions)
 
