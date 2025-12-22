@@ -27,6 +27,7 @@ profile_default/
 Thumbs.db
 .vscode/
 .idea/
+.config
 
 # =========================
 # Logs
